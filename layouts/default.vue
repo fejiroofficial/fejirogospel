@@ -1,8 +1,19 @@
 <template>
-  <div>
+  <div class="layout">
+    <NavBar />
     <Nuxt />
   </div>
 </template>
+
+<script>
+import NavBar from '~/components/Nav'
+
+export default {
+  components: {
+    NavBar,
+  },
+}
+</script>
 
 <style>
 html {
@@ -51,5 +62,15 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.layout {
+  background-image: url('~assets/noise.svg');
+  min-height: 100vh;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 5%;
 }
 </style>
