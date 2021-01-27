@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <Logo class="nav-item nav__logo" />
-    <span v-if="!isMobile">
+    <span v-if="loaded && !isMobile">
       <div class="nav__menu-item nav__menu-item1">Blog</div>
       <div class="nav__menu-item nav__menu-item2">Contact</div>
       <a
@@ -12,7 +12,11 @@
         Resume
       </a>
     </span>
-    <img v-else src="@/assets/menuIcon.svg" alt="menu" />
+    <img
+      v-else-if="loaded && isMobile"
+      src="@/assets/menuIcon.svg"
+      alt="menu"
+    />
   </div>
 </template>
 
@@ -21,22 +25,21 @@ export default {
   data() {
     return {
       isMobile: false,
+      loaded: false,
     }
   },
   mounted() {
-    window.addEventListener('resize', this.resizeHandler)
+    this.loaded = true
     this.resizeHandler()
+    window.addEventListener('resize', this.resizeHandler, { passive: true })
   },
   destroyed() {
-    window.removeEventListener('resize', this.resizeHandler)
+    this.loaded = false
+    window.removeEventListener('resize', this.resizeHandler, { passive: true })
   },
   methods: {
     resizeHandler() {
-      if (window.innerWidth <= 600) {
-        this.isMobile = true
-      } else {
-        this.isMobile = false
-      }
+      this.isMobile = window.innerWidth <= 600
     },
   },
 }
@@ -76,7 +79,7 @@ export default {
   & img {
     display: grid;
     justify-self: end;
-    align-self: center;
+    // align-self: center;
     grid-column: 10/11;
   }
 }

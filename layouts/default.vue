@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -72,5 +72,8 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 5%;
+  @media (max-width: 414px) {
+    background-image: url('~assets/noisemini.svg');
+  }
 }
 </style>

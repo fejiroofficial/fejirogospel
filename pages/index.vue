@@ -64,11 +64,15 @@ export default {}
 <style lang="scss" scoped>
 .container {
   display: grid;
-  height: 88vh;
+  height: 100%;
+  grid-template-rows: repeat(5, [col-start] 1fr [col-end]);
+  @media (max-width: 590px) {
+    grid-template-rows: repeat(1, [col-start] 1fr [col-end]);
+  }
   &__bio-feji {
     max-width: 505px;
     grid-column: 5/11;
-    grid-row: 5/10;
+    grid-row: 4/9;
     @media (max-width: 600px) {
       grid-column: 1/3;
       grid-row: 5/6;
@@ -84,9 +88,10 @@ export default {}
   }
   &__orange-feji {
     grid-column: 1/4;
-    grid-row: 3/6;
+    grid-row: 2/5;
     @media (max-width: 590px) {
       grid-column: 1/2;
+      grid-row: 2/5;
     }
     @media (max-width: 440px) {
       grid-column: 1/2;
@@ -106,9 +111,9 @@ export default {}
   &__socials {
     display: grid;
     grid-column: 1/4;
-    grid-row: 7;
+    grid-row: 6/9;
     & img {
-      margin-bottom: 22px;
+      margin-bottom: 15px;
       cursor: pointer;
     }
     @media (max-width: 600px) {
