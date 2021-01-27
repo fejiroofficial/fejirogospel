@@ -21,6 +21,12 @@
   margin: auto;
 }
 
+@media (max-width: 600px) {
+  svg {
+    height: 43px;
+  }
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
