@@ -8,10 +8,18 @@
         Nigeria.
       </p>
       <p>
-        I’m the Cofounder, COO, and VP Engineering of BuyCoins (YC S18), a
-        cryptocurrency exchange for Africa. We also built Sendcash, a
-        cryptocurrency-powered remittance platform to easily send money to
-        countries in Africa from around the world.
+        I’m founder, Feji & Beryl Tech, a media technology company providing
+        solutions for Africa's movie industry with it's flagship brand yet to be
+        piloted.
+      </p>
+      <p>
+        I am very passionate about working with startups. Though a frontend
+        developer, with my knowledge of backend technologies, I can be fullstack
+        every once in a while.
+      </p>
+      <p>
+        When I am not coding, I am enthusiastic about art, photography, music
+        and lifestyle.
       </p>
     </div>
     <div class="container__socials">
@@ -54,8 +62,6 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
-
 .container {
   display: grid;
   height: 88vh;
