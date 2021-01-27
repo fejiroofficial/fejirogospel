@@ -65,7 +65,7 @@ html {
 }
 
 .layout {
-  background-image: url('~assets/noise.svg');
+  background-image: url('~assets/noisex.jpg');
   min-height: 100vh;
   width: 100%;
   height: auto;
@@ -73,7 +73,7 @@ html {
   background-size: cover;
   padding: 0 5%;
   @media (max-width: 414px) {
-    background-image: url('~assets/noisemini.svg');
+    background-image: url('~assets/noisexmini.jpg');
   }
 }
 </style>
