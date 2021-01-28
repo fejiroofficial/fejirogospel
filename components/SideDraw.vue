@@ -7,7 +7,12 @@
       @click="$emit('drawToggle')"
     />
     <div class="side-nav__menu-items">
-      <div class="side-nav__menu-item">Blog</div>
+      <nuxt-link
+        to="/blog"
+        class="side-nav__menu-item"
+        @click.native="$emit('drawToggle')"
+        >Blog</nuxt-link
+      >
       <nuxt-link
         to="/contact"
         class="side-nav__menu-item"
