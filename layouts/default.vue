@@ -1,16 +1,29 @@
 <template>
   <div class="layout">
-    <NavBar />
+    <SideDraw v-if="showDraw" @drawToggle="drawToggle" />
+    <NavBar @drawToggle="drawToggle" />
     <Nuxt />
   </div>
 </template>
 
 <script>
 import NavBar from '~/components/Nav'
+import SideDraw from '~/components/SideDraw'
 
 export default {
   components: {
     NavBar,
+    SideDraw,
+  },
+  data() {
+    return {
+      showDraw: false,
+    }
+  },
+  methods: {
+    drawToggle() {
+      this.showDraw = !this.showDraw
+    },
   },
 }
 </script>

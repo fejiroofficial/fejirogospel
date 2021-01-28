@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <Logo class="nav-item nav__logo" />
-    <span v-if="loaded && !isMobile">
+    <span v-show="loaded && !isMobile">
       <div class="nav__menu-item nav__menu-item1">Blog</div>
       <div class="nav__menu-item nav__menu-item2">Contact</div>
       <a
@@ -13,9 +13,10 @@
       </a>
     </span>
     <img
-      v-else-if="loaded && isMobile"
+      v-show="loaded && isMobile"
       src="@/assets/menuIcon.svg"
       alt="menu"
+      @click="$emit('drawToggle')"
     />
   </div>
 </template>
