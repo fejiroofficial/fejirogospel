@@ -2,7 +2,9 @@
   <div class="nav">
     <Logo class="nav-item nav__logo" />
     <span v-show="loaded && !isMobile">
-      <div class="nav__menu-item nav__menu-item1">Blog</div>
+      <nuxt-link to="/blog" class="nav__menu-item nav__menu-item1">
+        Blog
+      </nuxt-link>
       <nuxt-link to="/contact" class="nav__menu-item nav__menu-item2">
         Contact
       </nuxt-link>
