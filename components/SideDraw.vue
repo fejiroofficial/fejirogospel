@@ -9,7 +9,9 @@
     <div class="side-nav__menu-items">
       <div class="side-nav__menu-item">Blog</div>
       <div class="side-nav__menu-item">Contact</div>
-      <div class="side-nav__menu-item">Resume</div>
+      <a class="side-nav__menu-item" href="resume.pdf" target="_blank">
+        Resume
+      </a>
     </div>
   </div>
 </template>
