@@ -8,7 +8,12 @@
     />
     <div class="side-nav__menu-items">
       <div class="side-nav__menu-item">Blog</div>
-      <div class="side-nav__menu-item">Contact</div>
+      <nuxt-link
+        to="/contact"
+        class="side-nav__menu-item"
+        @click.native="$emit('drawToggle')"
+        >Contact</nuxt-link
+      >
       <a class="side-nav__menu-item" href="resume.pdf" target="_blank">
         Resume
       </a>

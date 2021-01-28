@@ -3,7 +3,9 @@
     <Logo class="nav-item nav__logo" />
     <span v-show="loaded && !isMobile">
       <div class="nav__menu-item nav__menu-item1">Blog</div>
-      <div class="nav__menu-item nav__menu-item2">Contact</div>
+      <nuxt-link to="/contact" class="nav__menu-item nav__menu-item2">
+        Contact
+      </nuxt-link>
       <a
         class="nav__menu-item nav__menu-item3"
         href="resume.pdf"
@@ -62,6 +64,7 @@ export default {
     grid-column: 3/4;
     align-self: center;
     font-family: 'Poppins';
+    font-weight: bold;
     cursor: pointer;
   }
   &__menu-item1 {
@@ -74,8 +77,10 @@ export default {
     grid-column: 5/11;
   }
   & a {
+    color: rgba(0, 0, 0, 0.65);
+  }
+  & a:hover {
     color: #ea7b02;
-    font-weight: bold;
   }
   & img {
     display: grid;
