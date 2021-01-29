@@ -8,16 +8,22 @@
     />
     <div class="side-nav__menu-items">
       <nuxt-link
-        to="/blog"
+        to="/writing"
         class="side-nav__menu-item"
         @click.native="$emit('drawToggle')"
-        >Blog</nuxt-link
+        >Writing</nuxt-link
       >
       <nuxt-link
         to="/contact"
         class="side-nav__menu-item"
         @click.native="$emit('drawToggle')"
         >Contact</nuxt-link
+      >
+      <nuxt-link
+        to="/projects"
+        class="side-nav__menu-item"
+        @click.native="$emit('drawToggle')"
+        >Projects</nuxt-link
       >
       <a class="side-nav__menu-item" href="resume.pdf" target="_blank">
         Resume

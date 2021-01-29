@@ -2,14 +2,17 @@
   <div class="nav">
     <Logo class="nav-item nav__logo" />
     <span v-show="loaded && !isMobile">
-      <nuxt-link to="/blog" class="nav__menu-item nav__menu-item1">
-        Blog
+      <nuxt-link to="/writing" class="nav__menu-item nav__menu-item1">
+        Writing
       </nuxt-link>
       <nuxt-link to="/contact" class="nav__menu-item nav__menu-item2">
         Contact
       </nuxt-link>
+      <nuxt-link to="/projects" class="nav__menu-item nav__menu-item3">
+        Projects
+      </nuxt-link>
       <a
-        class="nav__menu-item nav__menu-item3"
+        class="nav__menu-item nav__menu-item4"
         href="resume.pdf"
         target="_blank"
       >
@@ -76,7 +79,10 @@ export default {
     grid-column: 4/5;
   }
   &__menu-item3 {
-    grid-column: 5/11;
+    grid-column: 5/6;
+  }
+  &__menu-item4 {
+    grid-column: 6/11;
   }
   & a {
     color: rgba(0, 0, 0, 0.65);
