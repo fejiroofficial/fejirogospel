@@ -4,8 +4,8 @@
     <div class="projects">UI/UX</div>
     <div class="projects__box">
       <img src="~/assets/pro1.svg" alt="" />
-      <img src="~/assets/pro2.svg" alt="" />
-      <img src="~/assets/pro3.svg" alt="" />
+      <img src="~/assets/pro4.png" alt="" />
+      <img src="~/assets/pro5.svg" alt="" />
     </div>
   </div>
 </template>
@@ -30,6 +30,8 @@ export default {}
     display: flex;
     flex-wrap: wrap;
     & img {
+      width: 370px;
+      height: 370px;
       @media (max-width: 822px) {
         width: 100%;
       }
