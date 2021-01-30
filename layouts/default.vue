@@ -85,6 +85,10 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 5%;
+  @media (max-width: 1042px) {
+    background-size: auto;
+    background-repeat: repeat;
+  }
   @media (max-width: 414px) {
     background-image: url('~assets/noisexmini.jpg');
   }

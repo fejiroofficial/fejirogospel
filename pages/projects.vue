@@ -1,11 +1,20 @@
 <template>
   <div class="projects">
     <div class="projects__title">Projects</div>
-    <div class="projects">UI/UX</div>
+    <div class="projects__label">UI/UX</div>
     <div class="projects__box">
       <img src="~/assets/pro1.svg" alt="" />
-      <img src="~/assets/pro4.png" alt="" />
+      <img src="~/assets/pro14.svg" alt="" />
       <img src="~/assets/pro5.svg" alt="" />
+      <img src="~/assets/pro9.svg" alt="" />
+      <img src="~/assets/pro10.svg" alt="" />
+    </div>
+    <div class="projects__label">DEV</div>
+    <div class="projects__box">
+      <img src="~/assets/pro6.svg" alt="" />
+      <img src="~/assets/pro7.svg" alt="" />
+      <img src="~/assets/pro8.svg" alt="" />
+      <img src="~/assets/pro11.svg" alt="" />
     </div>
   </div>
 </template>
@@ -26,9 +35,16 @@ export default {}
     line-height: 63px;
     color: #000000;
   }
+  &__label {
+    background-color: white;
+    width: fit-content;
+    border-top-right-radius: 7px;
+    box-shadow: 0px 0px 23px 3px lightgrey;
+  }
   &__box {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 40px;
     & img {
       width: 370px;
       height: 370px;
