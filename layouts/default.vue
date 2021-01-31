@@ -89,8 +89,8 @@ html {
     background-size: auto;
     background-repeat: repeat;
   }
-  @media (max-width: 414px) {
-    background-image: url('~assets/noisexmini.jpg');
-  }
+  // @media (max-width: 414px) {
+  //   background-image: url('~assets/noisexmini.jpg');
+  // }
 }
 </style>

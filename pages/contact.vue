@@ -58,7 +58,6 @@ export default {}
     cursor: pointer;
     &:hover {
       background-color: rgb(204, 106, 0);
-      font-size: 16px;
     }
   }
 }

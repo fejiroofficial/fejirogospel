@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <Logo class="nav-item nav__logo" />
-    <span v-show="loaded && !isMobile">
+    <span class="nav__desktop">
       <nuxt-link to="/writing" class="nav__menu-item nav__menu-item1">
         Writing
       </nuxt-link>
@@ -20,7 +20,7 @@
       </a>
     </span>
     <img
-      v-show="loaded && isMobile"
+      class="nav__mobile"
       src="@/assets/menuIcon.svg"
       alt="menu"
       @click="$emit('drawToggle')"
@@ -29,28 +29,7 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      isMobile: false,
-      loaded: false,
-    }
-  },
-  mounted() {
-    this.loaded = true
-    this.resizeHandler()
-    window.addEventListener('resize', this.resizeHandler, { passive: true })
-  },
-  destroyed() {
-    this.loaded = false
-    window.removeEventListener('resize', this.resizeHandler, { passive: true })
-  },
-  methods: {
-    resizeHandler() {
-      this.isMobile = window.innerWidth <= 600
-    },
-  },
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -58,12 +37,23 @@ export default {
   display: grid;
   height: 100px;
   align-content: center;
+  &__desktop {
+    display: contents;
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+  &__mobile {
+    display: grid;
+    justify-self: end;
+    grid-column: 10/11;
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
   &__logo {
     grid-column: 1/2;
     align-self: center;
-  }
-  & span {
-    display: contents;
   }
   &__menu-item {
     grid-column: 3/4;
@@ -89,12 +79,6 @@ export default {
   }
   & a:hover {
     color: #ea7b02;
-  }
-  & img {
-    display: grid;
-    justify-self: end;
-    // align-self: center;
-    grid-column: 10/11;
   }
 }
 </style>
