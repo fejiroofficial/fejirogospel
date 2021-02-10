@@ -78,7 +78,7 @@ html {
 }
 
 .layout {
-  background-image: url('~assets/noisex.jpg');
+  // background-image: url('~assets/noisex.jpg');
   min-height: 100vh;
   width: 100%;
   height: auto;

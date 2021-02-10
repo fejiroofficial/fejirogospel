@@ -1,10 +1,14 @@
 <template>
   <div>
     <div v-for="post in posts" :key="post._id">
-      <h2><a :href="post.slug.current" v-text="post.title" /></h2>
-      <p>{{ post.body[0].children[post.body[0].children.length - 1].text }}</p>
-      <div>{{ post._createdAt }}</div>
-      <div>{{ post }}</div>
+      <h2><a :href="slug(post.slug.current)" v-text="post.title" /></h2>
+      <div class="summary">
+        <block-content
+          v-if="post.body.length"
+          :key="post.body[0]._id"
+          :blocks="post.body[0]"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -17,6 +21,11 @@ export default {
     const query = groq`*[_type == "post"]`
     const posts = await $sanity.fetch(query)
     return { posts }
+  },
+  methods: {
+    slug(slug) {
+      return `articles/${slug}`
+    },
   },
 }
 </script>
