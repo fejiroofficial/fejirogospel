@@ -1,8 +1,13 @@
 <template>
-  <div class="container">
+  <div class="write-container">
     <div v-if="post" class="blog-body">
-      <!-- <h4><a href="/articles">← Go back</a></h4> -->
       <h1 class="title" v-text="post.title" />
+      <block-content
+        v-if="post.mainImage && Object.keys(post.mainImage).length"
+        :blocks="post.mainImage"
+        project-id="d1dl1gbc"
+        dataset="production"
+      />
       <div class="content">
         <block-content
           v-for="child in post.body"
@@ -40,22 +45,26 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
+.write-container {
   display: flex;
   justify-content: center;
+}
+
+.title {
+  font-family: 'Poppins';
 }
 
 .blog-body {
   width: 50em;
   margin: 0 auto;
-  // max-width: 50%;
+  margin: 2em 0 10em 0;
   @media (max-width: '768px') {
     width: -webkit-fill-available;
     width: -moz-fill-available;
   }
   p {
-    font-size: 16px;
-    font-family: 'Poppins';
+    font-size: 18px;
+    // font-family: 'Poppins';
     text-align: justify;
   }
   img {
