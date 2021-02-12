@@ -24,7 +24,7 @@
 
 <script>
 import { groq } from '@nuxtjs/sanity'
-import Code from './serializer'
+import Code from '~/serializer/code'
 
 export default {
   async asyncData({ params, $sanity }) {

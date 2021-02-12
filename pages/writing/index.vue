@@ -29,13 +29,9 @@ import { groq } from '@nuxtjs/sanity'
 
 export default {
   async asyncData({ $sanity }) {
-    try {
-      const query = groq`*[_type == "post"]`
-      const posts = await $sanity.fetch(query)
-      return { posts }
-    } catch (err) {
-      console.log('error found', err)
-    }
+    const query = groq`*[_type == "post"]`
+    const posts = await $sanity.fetch(query)
+    return { posts }
   },
   methods: {
     slug(slug) {
