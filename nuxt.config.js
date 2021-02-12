@@ -37,6 +37,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/sanity',
+    '@nuxtjs/axios',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

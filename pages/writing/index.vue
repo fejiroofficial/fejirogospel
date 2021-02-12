@@ -1,6 +1,6 @@
 <template>
   <div class="writing">
-    <nuxt-link
+    <NuxtLink
       v-for="post in posts"
       :key="post._id"
       :to="slug(post.slug.current)"
@@ -20,7 +20,7 @@
           dataset="production"
         />
       </div>
-    </nuxt-link>
+    </NuxtLink>
   </div>
 </template>
 
@@ -29,9 +29,13 @@ import { groq } from '@nuxtjs/sanity'
 
 export default {
   async asyncData({ $sanity }) {
-    const query = groq`*[_type == "post"]`
-    const posts = await $sanity.fetch(query)
-    return { posts }
+    try {
+      const query = groq`*[_type == "post"]`
+      const posts = await $sanity.fetch(query)
+      return { posts }
+    } catch (err) {
+      console.log('error found', err)
+    }
   },
   methods: {
     slug(slug) {
