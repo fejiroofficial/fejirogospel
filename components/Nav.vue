@@ -13,7 +13,7 @@
       </nuxt-link>
       <a
         class="nav__menu-item nav__menu-item4"
-        href="resume.pdf"
+        href="/resume.pdf"
         target="_blank"
       >
         Resume

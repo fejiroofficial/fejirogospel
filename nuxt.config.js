@@ -44,11 +44,19 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     // '@nuxtjs/axios',
+    '@nuxtjs/sanity',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    devMiddleware: {
+      headers: {
+        'Cache-Control': 'no-store',
+        Vary: '*',
+      },
+    },
+  },
 }

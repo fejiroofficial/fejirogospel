@@ -25,7 +25,7 @@
         @click.native="$emit('drawToggle')"
         >Projects</nuxt-link
       >
-      <a class="side-nav__menu-item" href="resume.pdf" target="_blank">
+      <a class="side-nav__menu-item" href="/resume.pdf" target="_blank">
         Resume
       </a>
     </div>
