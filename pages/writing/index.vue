@@ -56,7 +56,9 @@ export default {
   img {
     height: inherit;
     width: 200px;
-    object-fit: contain;
+    object-fit: cover;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
   &__summary-content {
     padding: 4em 2em 4em 2em;
@@ -71,7 +73,7 @@ export default {
     min-height: 200px;
     width: 50em;
     border: 1px solid #e6e6e6;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
     justify-self: center;
     border-radius: 9px;
     text-align: justify;
@@ -87,6 +89,7 @@ export default {
       color: #ea7b02;
       font-weight: bold;
       font-family: 'Poppins';
+      text-align: initial;
     }
   }
 }

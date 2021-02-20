@@ -57,7 +57,7 @@ export default {
 .blog-body {
   width: 50em;
   margin: 0 auto;
-  margin: 2em 0 10em 0;
+  margin: 0 0 10em 0;
   @media (max-width: '768px') {
     width: 98%; // mozilla client
     width: -webkit-fill-available;
