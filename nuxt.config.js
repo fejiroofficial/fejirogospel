@@ -5,7 +5,15 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: `I’m a frontend developer and user interface designer from Lagos,
+      Nigeria. I’m founder, Jiro Tech, a media technology company providing solutions
+      for Africa's movie industry with it's flagship brand yet to be piloted. I am very passionate about working with startups. Though a frontend
+      developer, with my knowledge of backend technologies, I can be fullstack
+      every once in a while.`,
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/faviconWhite.svg' },

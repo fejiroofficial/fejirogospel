@@ -2,15 +2,14 @@
   <div class="container">
     <img class="container__orange-feji" src="@/assets/fejiorange.svg" alt="" />
     <div class="container__bio-feji">
-      <div class="container__title">Fejiro Gospel</div>
+      <h1 class="container__title">Fejiro Gospel</h1>
       <p>
         I’m a frontend developer and user interface designer from Lagos,
         Nigeria.
       </p>
       <p>
-        I’m founder, Feji & Beryl Tech, a media technology company providing
-        solutions for Africa's movie industry with it's flagship brand yet to be
-        piloted.
+        I’m founder, Jiro Tech, a media technology company providing solutions
+        for Africa's movie industry with it's flagship brand yet to be piloted.
       </p>
       <p>
         I am very passionate about working with startups. Though a frontend
